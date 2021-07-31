@@ -11,7 +11,7 @@ instance.defaults.jar = new tough.CookieJar();
 
 app.use(cors())
 
-const port = process.env.PORT || 1234
+const port = process.env.PORT || 8080
 
 app.get("/option-chain", (req, res, next) => {
     instance.get('https://www.nseindia.com/')

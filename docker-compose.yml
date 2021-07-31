@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  stock_analyzer_server:
+    container_name: stockAnalyzerServer
+    image: raju6713/stock-analyzer-server
+    build: .
+    ports:
+      - "1234:8080"
+    volumes:
+      - .:/code
+    environment:
+      - TZ=Asia/Kolkata
+    restart: unless-stopped
